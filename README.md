@@ -48,7 +48,7 @@ From your command line, clone and run:
 
 ```bash
 # Clone this repository
-git clone https://github.com/SaadMalik171999/client-project.git
+git clone https://github.com/SaadMalik171999/dataSet-demo-project.git
 
 # Go into the repository
 cd client-project
