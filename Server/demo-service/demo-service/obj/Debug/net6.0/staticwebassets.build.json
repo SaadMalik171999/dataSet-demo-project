@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "UbAw3WmFvgJZKbswk9r4fVMC+9W0a8LWcoruMl6XUh4=",
+  "Source": "demo-service",
+  "BasePath": "_content/demo-service",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

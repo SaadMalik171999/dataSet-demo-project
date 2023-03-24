@@ -1,0 +1,48 @@
+<form class="example-form" [formGroup]="dataSetForm" (ngSubmit)="updateData()">
+  <mat-card>
+    <mat-card-content>
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Id</mat-label>
+        <input matInput placeholder="ID" formControlName="Id" />
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Start</mat-label>
+        <input
+          matInput
+          placeholder="Start"
+          type="number"
+          formControlName="Start"
+        />
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>End</mat-label>
+        <input matInput placeholder="End" type="number" formControlName="End" />
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Event</mat-label>
+        <input matInput placeholder="Event" formControlName="Event" />
+      </mat-form-field>
+    </mat-card-content>
+    <mat-card-footer>
+      <div
+        class="example-button-row"
+        style="margin-left: 12px; margin-bottom: 30px"
+      >
+        <button
+          style="margin-right: 10px"
+          [disabled]="dataSetForm.invalid"
+          mat-raised-button
+          color="primary"
+        >
+          Update
+        </button>
+        <button (click)="closepopup()" mat-raised-button color="basic">
+          Close
+        </button>
+      </div>
+    </mat-card-footer>
+  </mat-card>
+</form>

@@ -1,0 +1,58 @@
+<h1>Data Set Table</h1>
+<mat-progress-bar *ngIf="isLoading" mode="indeterminate"></mat-progress-bar>
+
+<div class="mat-elevation-z8">
+  <div>
+    <a
+      mat-raised-button
+      color="primary"
+      (click)="CreateDataSet()"
+      style="margin: 2%"
+      >Create New</a
+    >
+  </div>
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+    <ng-container matColumnDef="Start">
+      <th mat-header-cell *matHeaderCellDef>Start</th>
+      <td mat-cell *matCellDef="let element">{{ element.start }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="End">
+      <th mat-header-cell *matHeaderCellDef>End</th>
+      <td mat-cell *matCellDef="let element">{{ element.end }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="Event">
+      <th mat-header-cell *matHeaderCellDef>Event</th>
+      <td mat-cell *matCellDef="let element">{{ element.event }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="Actions">
+      <th mat-header-cell style="width: 0px" *matHeaderCellDef>Actions</th>
+      <td mat-cell *matCellDef="let element">
+        <div style="display: flex">
+          <button
+            style="margin-right: 5px"
+            mat-raised-button
+            (click)="UpdateDataSet(element.id)"
+            color="secondary"
+          >
+            Edit
+          </button>
+          <button
+            mat-raised-button
+            (click)="DeleteDataSet(element.id)"
+            color="warn"
+          >
+            Delete
+          </button>
+        </div>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayColumns"></tr>
+  </table>
+  <mat-paginator [pageSizeOptions]="[10, 20]" showFirstLastButtons>
+  </mat-paginator>
+</div>

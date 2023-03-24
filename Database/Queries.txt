@@ -1,0 +1,17 @@
+INSERT INTO [DEMODB].[dbo].[DataSets] (Start, End, Event)
+VALUES (50,150,'Stuck Pipe');
+
+INSERT INTO [DEMODB].[dbo].[DataSets] (Start, End, Event)
+VALUES (100,200,'Mud Loss');
+
+INSERT INTO [DEMODB].[dbo].[DataSets] (Start, End, Event)
+VALUES (150,200,'Circulation Loss');
+
+INSERT INTO [DEMODB].[dbo].[DataSets] (Start, End, Event)
+VALUES (400,450,'Stuck Pipe');
+
+INSERT INTO [DEMODB].[dbo].[DataSets] (Start, End, Event)
+VALUES (600,650,'Circulation Loss');
+
+INSERT INTO [DEMODB].[dbo].[DataSets] (Start, End, Event)
+VALUES (550,700,'Circulation Loss');
